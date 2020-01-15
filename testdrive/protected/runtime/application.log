@@ -1,0 +1,124 @@
+2020/01/15 10:13:01 [error] [php] Undefined variable: model (C:\xampp\htdocs\yii\testdrive\protected\views\site\index.php:28)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#2 C:\xampp\htdocs\yii\testdrive\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/testdrive/index.php
+in C:\xampp\htdocs\yii\testdrive\protected\views\site\index.php (28)
+in C:\xampp\htdocs\yii\testdrive\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\yii\testdrive\index.php (13)
+2020/01/15 10:39:40 [error] [exception.CException] CException: LoginForm and its behaviors do not have a method or closure named "save". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\testdrive\protected\controllers\SiteController.php(50): CComponent->__call('save', Array)
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\yii\testdrive\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii/testdrive/index.php
+HTTP_REFERER=http://localhost/yii/testdrive/index.php
+---
+2020/01/15 10:56:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shekhardb.loginform' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `LoginForm`.
+in C:\xampp\htdocs\yii\testdrive\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\yii\testdrive\index.php (13)
+2020/01/15 10:56:17 [error] [exception.CDbException] CDbException: The table "LoginForm" for active record class "LoginForm" cannot be found in the database. in C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php:2390
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(LoginForm))
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\yii\testdrive\protected\controllers\SiteController.php(32): CActiveRecord->__construct()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\testdrive\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/testdrive/index.php
+HTTP_REFERER=http://localhost/yii/testdrive/index.php
+---
+2020/01/15 11:01:16 [error] [php] include(authenticate.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\YiiBase.php(310): class_exists()
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(174): import()
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(287): createValidator()
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(260): User->createValidators()
+#5 C:\xampp\htdocs\yii\framework\base\CModel.php(304): User->getValidators()
+#6 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1520): User->isAttributeRequired()
+#7 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(600): activeLabelEx()
+#8 C:\xampp\htdocs\yii\testdrive\protected\views\site\index.php(24): CActiveForm->labelEx()
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#13 C:\xampp\htdocs\yii\testdrive\protected\controllers\SiteController.php(52): SiteController->render()
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/testdrive/index.php
+in C:\xampp\htdocs\yii\testdrive\protected\views\site\index.php (24)
+in C:\xampp\htdocs\yii\testdrive\protected\controllers\SiteController.php (52)
+in C:\xampp\htdocs\yii\testdrive\index.php (13)
+2020/01/15 11:05:50 [error] [exception.CException] CException: Property "User._identity" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(162): CComponent->__set('_identity', Object(UserIdentity))
+#1 C:\xampp\htdocs\yii\testdrive\protected\models\User.php(21): CActiveRecord->__set('_identity', Object(UserIdentity))
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): User->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(User), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(User), Array)
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(810): CModel->validate(NULL)
+#6 C:\xampp\htdocs\yii\testdrive\protected\controllers\SiteController.php(46): CActiveRecord->save()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\yii\testdrive\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii/testdrive/index.php
+HTTP_REFERER=http://localhost/yii/testdrive/index.php
+---
+2020/01/15 11:13:57 [warning] [application] Failed to set unsafe attribute "password" of "User".
+in C:\xampp\htdocs\yii\testdrive\protected\controllers\SiteController.php (44)
+in C:\xampp\htdocs\yii\testdrive\index.php (13)
+2020/01/15 11:13:57 [error] [exception.CException] CException: Property "User.md5(password)" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('md5(password)')
+#1 C:\xampp\htdocs\yii\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('md5(password)')
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(User), 'md5(password)')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(User), Array)
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(810): CModel->validate(NULL)
+#5 C:\xampp\htdocs\yii\testdrive\protected\controllers\SiteController.php(46): CActiveRecord->save()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yii\testdrive\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/testdrive/index.php
+HTTP_REFERER=http://localhost/yii/testdrive/index.php
+---
